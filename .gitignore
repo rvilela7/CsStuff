@@ -35,3 +35,4 @@ RandomStuff.Tests/bin/Debug/netcoreapp2.0/RandomStuff.Tests.deps.json
 RandomStuff.Tests/bin/Debug/netcoreapp2.0/RandomStuff.Tests.runtimeconfig.json
 RandomStuff.Tests/bin/Debug/netcoreapp2.0/RandomStuff.Tests.runtimeconfig.dev.json
 RandomStuff.Tests/obj/Debug/netcoreapp2.0/RandomStuff.Tests.dll
+RandomStuff/obj/Debug/netcoreapp2.0/RandomStuff.csprojAssemblyReference.cache
