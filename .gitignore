@@ -1,0 +1,15 @@
+obj/Debug/netcoreapp2.0/CsStuff.csproj.FileListAbsolute.txt
+bin/Debug/netcoreapp2.0/CsStuff.dll
+bin/Debug/netcoreapp2.0/CsStuff.pdb
+bin/Debug/netcoreapp2.0/CsStuff.deps.json
+bin/Debug/netcoreapp2.0/CsStuff.runtimeconfig.json
+bin/Debug/netcoreapp2.0/CsStuff.runtimeconfig.dev.json
+obj/CsStuff.csproj.nuget.cache
+obj/CsStuff.csproj.nuget.g.props
+obj/CsStuff.csproj.nuget.g.targets
+obj/project.assets.json
+obj/Debug/netcoreapp2.0/CsStuff.dll
+obj/Debug/netcoreapp2.0/CsStuff.pdb
+obj/Debug/netcoreapp2.0/CsStuff.AssemblyInfo.cs
+obj/Debug/netcoreapp2.0/CsStuff.AssemblyInfoInputs.cache
+obj/Debug/netcoreapp2.0/CsStuff.csproj.CoreCompileInputs.cache
