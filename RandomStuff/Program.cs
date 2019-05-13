@@ -45,7 +45,6 @@ namespace RandomStuff
 
             var myMD5List = myLista.Select(m => MD5Gen.CreateMD5(m.ToString())).ToList();
 
-            //myLista.ForEach(i => Console.WriteLine(i));
             myMD5List.ForEach(i => Console.WriteLine(i));
         }
     }
