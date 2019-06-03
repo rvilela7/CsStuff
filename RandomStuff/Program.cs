@@ -4,10 +4,13 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace CsStuff
+namespace RandomStuff
 {
-    class Program
+    public class MD5Gen
     {
+        public MD5Gen()
+        {
+        }
 
         public static string CreateMD5(string input)
         {
@@ -26,7 +29,10 @@ namespace CsStuff
                 return sb.ToString();
             }
         }
+    }
 
+    class Program
+    {
         static void Main(string[] args)
         {
             Random r = new Random();
@@ -35,9 +41,10 @@ namespace CsStuff
                                     .Select(i => r.Next(10))
                                     .ToList();
 
-            var myMD5List = myLista.Select(m => CreateMD5(m.ToString())).ToList();
+            var MD5Gen = new MD5Gen();
 
-            //myLista.ForEach(i => Console.WriteLine(i));
+            var myMD5List = myLista.Select(m => MD5Gen.CreateMD5(m.ToString())).ToList();
+
             myMD5List.ForEach(i => Console.WriteLine(i));
         }
     }
