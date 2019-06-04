@@ -11,11 +11,7 @@ namespace ObserverPattern
   class MainApp
 
   {
-    /// <summary>
-    /// Entry point into console application.
-    /// </summary>
-
-    static void Main()
+      static void Main()
     {
       IBM ibm = new IBM("IBM", 120.00);
       TP TP = new TP("TP", 10.00);
@@ -43,6 +39,7 @@ namespace ObserverPattern
     }
   }
    
+	#region StockRegion
   abstract class Stock
   {
     private string _symbol;
@@ -107,6 +104,8 @@ namespace ObserverPattern
 
 		}
 	}
+
+	#endregion
    
   interface IInvestor
   {
