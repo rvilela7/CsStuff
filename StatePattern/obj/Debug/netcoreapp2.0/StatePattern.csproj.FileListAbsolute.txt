@@ -1,0 +1,10 @@
+C:\Users\rui.vilela\Source\Repos\CsStuff\StatePattern\bin\Debug\netcoreapp2.0\StatePattern.deps.json
+C:\Users\rui.vilela\Source\Repos\CsStuff\StatePattern\bin\Debug\netcoreapp2.0\StatePattern.runtimeconfig.json
+C:\Users\rui.vilela\Source\Repos\CsStuff\StatePattern\bin\Debug\netcoreapp2.0\StatePattern.runtimeconfig.dev.json
+C:\Users\rui.vilela\Source\Repos\CsStuff\StatePattern\bin\Debug\netcoreapp2.0\StatePattern.dll
+C:\Users\rui.vilela\Source\Repos\CsStuff\StatePattern\bin\Debug\netcoreapp2.0\StatePattern.pdb
+C:\Users\rui.vilela\Source\Repos\CsStuff\StatePattern\obj\Debug\netcoreapp2.0\StatePattern.csproj.CoreCompileInputs.cache
+C:\Users\rui.vilela\Source\Repos\CsStuff\StatePattern\obj\Debug\netcoreapp2.0\StatePattern.AssemblyInfoInputs.cache
+C:\Users\rui.vilela\Source\Repos\CsStuff\StatePattern\obj\Debug\netcoreapp2.0\StatePattern.AssemblyInfo.cs
+C:\Users\rui.vilela\Source\Repos\CsStuff\StatePattern\obj\Debug\netcoreapp2.0\StatePattern.dll
+C:\Users\rui.vilela\Source\Repos\CsStuff\StatePattern\obj\Debug\netcoreapp2.0\StatePattern.pdb
