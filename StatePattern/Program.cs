@@ -19,13 +19,14 @@ namespace StatePattern
  
       account.Deposit(500.0);
       account.Deposit(300.0);
-      account.Deposit(550.0);
       account.PayInterest();
       //account.Withdraw(2000.00);
 
       var withdrawals = Enumerable.Range(0, 100).Select(i => n.Next(10)).ToList();
 
       withdrawals.ForEach(m => account.Withdraw(m));
+
+      account.Deposit(550.0);
       
       //Console.ReadKey();
     }
@@ -62,15 +63,10 @@ namespace StatePattern
  
  
   /// <summary>
-
   /// A 'ConcreteState' class
-
   /// <remarks>
-
   /// Red indicates that account is overdrawn 
-
   /// </remarks>
-
   /// </summary>
 
   class RedState : State
@@ -78,8 +74,6 @@ namespace StatePattern
   {
     private double _serviceFee;
  
-    // Constructor
-
     public RedState(State state)
     {
       this.balance = state.Balance;
@@ -89,8 +83,6 @@ namespace StatePattern
  
     private void Initialize()
     {
-      // Should come from a datasource
-
       interest = 0.0;
       lowerLimit = -100.0;
       upperLimit = 0.0;
@@ -111,7 +103,6 @@ namespace StatePattern
  
     public override void PayInterest()
     {
-      // No interest is paid
 
     }
  
@@ -125,23 +116,15 @@ namespace StatePattern
   }
  
   /// <summary>
-
   /// A 'ConcreteState' class
-
   /// <remarks>
-
   /// Silver indicates a non-interest bearing state
-
   /// </remarks>
-
   /// </summary>
 
   class SilverState : State
 
   {
-    // Overloaded constructors
-
- 
     public SilverState(State state) :
       this(state.Balance, state.Account)
     {
@@ -195,22 +178,15 @@ namespace StatePattern
   }
  
   /// <summary>
-
   /// A 'ConcreteState' class
-
   /// <remarks>
-
   /// Gold indicates an interest bearing state
-
   /// </remarks>
-
   /// </summary>
 
   class GoldState : State
 
   {
-    // Overloaded constructors
-
     public GoldState(State state)
       : this(state.Balance, state.Account)
     {
@@ -225,8 +201,6 @@ namespace StatePattern
  
     private void Initialize()
     {
-      // Should come from a database
-
       interest = 0.05;
       lowerLimit = 1000.0;
       upperLimit = 10000000.0;
@@ -264,9 +238,7 @@ namespace StatePattern
   }
  
   /// <summary>
-
   /// The 'Context' class
-
   /// </summary>
 
   class Account
@@ -275,18 +247,12 @@ namespace StatePattern
     private State _state;
     private string _owner;
  
-    // Constructor
-
     public Account(string owner)
     {
-      // New accounts are 'Silver' by default
-
       this._owner = owner;
       this._state = new SilverState(0.0, this);
     }
  
-    // Properties
-
     public double Balance
     {
       get { return _state.Balance; }
