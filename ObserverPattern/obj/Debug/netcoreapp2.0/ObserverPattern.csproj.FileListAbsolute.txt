@@ -1,0 +1,10 @@
+C:\Users\rui.vilela\Source\Repos\CsStuff\ObserverPattern\bin\Debug\netcoreapp2.0\ObserverPattern.deps.json
+C:\Users\rui.vilela\Source\Repos\CsStuff\ObserverPattern\bin\Debug\netcoreapp2.0\ObserverPattern.runtimeconfig.json
+C:\Users\rui.vilela\Source\Repos\CsStuff\ObserverPattern\bin\Debug\netcoreapp2.0\ObserverPattern.runtimeconfig.dev.json
+C:\Users\rui.vilela\Source\Repos\CsStuff\ObserverPattern\bin\Debug\netcoreapp2.0\ObserverPattern.dll
+C:\Users\rui.vilela\Source\Repos\CsStuff\ObserverPattern\bin\Debug\netcoreapp2.0\ObserverPattern.pdb
+C:\Users\rui.vilela\Source\Repos\CsStuff\ObserverPattern\obj\Debug\netcoreapp2.0\ObserverPattern.csproj.CoreCompileInputs.cache
+C:\Users\rui.vilela\Source\Repos\CsStuff\ObserverPattern\obj\Debug\netcoreapp2.0\ObserverPattern.AssemblyInfoInputs.cache
+C:\Users\rui.vilela\Source\Repos\CsStuff\ObserverPattern\obj\Debug\netcoreapp2.0\ObserverPattern.AssemblyInfo.cs
+C:\Users\rui.vilela\Source\Repos\CsStuff\ObserverPattern\obj\Debug\netcoreapp2.0\ObserverPattern.dll
+C:\Users\rui.vilela\Source\Repos\CsStuff\ObserverPattern\obj\Debug\netcoreapp2.0\ObserverPattern.pdb
