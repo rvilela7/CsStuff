@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rui.vilela\\Source\\Repos\\CsStuff\\AbstractFactoryPattern\\AbstractFactoryPattern.csproj",
+      "projectUniqueName": "c:\\Users\\rui.vilela\\Source\\Repos\\CsStuff\\AbstractFactoryPattern\\AbstractFactoryPattern.csproj",
       "projectName": "AbstractFactoryPattern",
-      "projectPath": "C:\\Users\\rui.vilela\\Source\\Repos\\CsStuff\\AbstractFactoryPattern\\AbstractFactoryPattern.csproj",
+      "projectPath": "c:\\Users\\rui.vilela\\Source\\Repos\\CsStuff\\AbstractFactoryPattern\\AbstractFactoryPattern.csproj",
       "packagesPath": "C:\\Users\\rui.vilela\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rui.vilela\\Source\\Repos\\CsStuff\\AbstractFactoryPattern\\obj\\",
+      "outputPath": "c:\\Users\\rui.vilela\\Source\\Repos\\CsStuff\\AbstractFactoryPattern\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
