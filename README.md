@@ -1,2 +1,2 @@
 # CsStuff
-Testing new C# related design patterns
+Trials and overview with C# related design patterns
