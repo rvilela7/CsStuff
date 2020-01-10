@@ -1,10 +1,21 @@
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Async.Classes
 {
-    public static class MyTask
+    public class MyTask
     {
-        public static int Value { get; set; }
-        public static void MySleep() => Thread.Sleep(4000);
+        public void MySleep() => Thread.Sleep(4000);
+        public async Task MySleep2() => await Task.Delay(4000);
+
+        public async Task<string> MyTest1() { 
+            await MySleep2();
+            await MySleep2();
+            await MySleep2();
+            //MySleep();
+
+            Task.WaitAll();
+            return "reply";        
+        }
     }
 }

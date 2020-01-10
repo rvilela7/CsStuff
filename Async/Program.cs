@@ -7,10 +7,13 @@ namespace Async
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Start");
+            Console.ReadKey();
 
-
-            MyTask.MySleep();
+            MyTask tt = new MyTask();
+            var c = tt.MyTest1();
+        
+            Console.WriteLine("End");
 
         }
     }
