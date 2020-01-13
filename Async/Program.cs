@@ -1,108 +1,56 @@
 ﻿using System;
 using System.Threading.Tasks;
-using System.IO;
+using Async;
 
 namespace task_demo
 {
-  class Program
-  {
-      static async Task<string> ReadTxtFile() 
-      {
-          using(var sr = new StreamReader(File.Open("test.txt", FileMode.Open)))
-          {
-              return await sr.ReadToEndAsync();
-          }
-      }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            AsyncTask _asyncTask = new AsyncTask();
 
-      static string ReadFileSync1() 
-      {
-          Task.Delay(2000).Wait();
-          return "content1";
-      }
+            var start = DateTime.Now;
+            var c1 = _asyncTask.ReadFileSync1();
+            var c2 = _asyncTask.ReadFileSync2();
+            var c3 = _asyncTask.ReadFileSync3();
+            var end = DateTime.Now;
+            Console.WriteLine("Time taken {0}", end - start);
 
-      static string ReadFileSync2()
-      {
-          Task.Delay(2000).Wait();
-          return "content2";
-      }
+            start = DateTime.Now;
 
-      static string ReadFileSync3()
-          {
-          Task.Delay(2000).Wait();
-          return "content3";
-      }
-      
-      static async Task DoSomething()
-      {
-          await Task.Delay(2000);
-      }
-      static async Task<int> Sum(int a, int b) 
-      {
-          var result = await Task.FromResult(a + b);
-          return result;
-      }
+            var taskSum = _asyncTask.Sum(2, 2);
+            var taskDelay = _asyncTask.DoSomething();
 
-      static async Task<string> ReadFile1() 
-      {
-          await Task.Delay(3000);
-          return "file1";
-      }
+            Task.WaitAll(taskSum, taskDelay);
 
-      static async Task<string> ReadFile2()
-      {
-          await Task.Delay(4000);
-          return "file2";
-      }
+            end = DateTime.Now;
 
-      static async Task<string> ReadFile3()
-      {
-          await Task.Delay(2000);
-          return "file3";
-      }
+            Console.WriteLine("{0}", taskSum.Result);
 
-      static void Main(string[] args)
-      {
-          var start = DateTime.Now;
-          var c1 = ReadFileSync1();
-          var c2 = ReadFileSync2();
-          var c3 = ReadFileSync3();
-          var end = DateTime.Now;
-          Console.WriteLine("Time taken {0}", end-start);
+            Console.WriteLine("Time taken! {0}", end - start);
 
-          start  = DateTime.Now;
+            var task1 = _asyncTask.ReadFile1();
+            var task2 = _asyncTask.ReadFile2();
+            var task3 = _asyncTask.ReadFile3();
 
-          var taskSum = Sum(2,2);
-          var taskDelay = DoSomething();
+            start = DateTime.Now;
+            Task.WaitAny(task1, task2, task3);
 
-          Task.WaitAll(taskSum, taskDelay);
 
-          end = DateTime.Now;
+            Console.WriteLine("Task1, completed: {0}", task1.IsCompleted);
 
-          Console.WriteLine("{0}",taskSum.Result);
+            // this forces everyone to wait for this Task1
+            // Console.WriteLine("Task1, completed: {0}", task1.Result);
 
-          Console.WriteLine("Time taken! {0}", end-start);
+            Console.WriteLine("Task2, completed: {0}", task2.IsCompleted);
 
-          var task1 = ReadFile1();
-          var task2 = ReadFile2();
-          var task3 = ReadFile3();
+            Console.WriteLine("Task3, completed: {0}", task3.IsCompleted);
+            Console.WriteLine("Task3, completed: {0}", task3.Result);
 
-          start = DateTime.Now;
-          Task.WaitAny(task1, task2, task3);
-          
-          
-          Console.WriteLine("Task1, completed: {0}", task1.IsCompleted);
-          
-          // this forces everyone to wait for this Task1
-          // Console.WriteLine("Task1, completed: {0}", task1.Result);
+            end = DateTime.Now;
+            Console.WriteLine("Time taken! {0}", end - start);
 
-          Console.WriteLine("Task2, completed: {0}", task2.IsCompleted);
-
-          Console.WriteLine("Task3, completed: {0}", task3.IsCompleted);
-          Console.WriteLine("Task3, completed: {0}", task3.Result);
-
-          end = DateTime.Now;
-          Console.WriteLine("Time taken! {0}", end - start);
-
-      }
-  }
+        }
+    }
 }
