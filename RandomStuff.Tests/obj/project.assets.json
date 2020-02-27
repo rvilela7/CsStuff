@@ -5749,11 +5749,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rui.vilela\\Source\\Repos\\CsStuff\\RandomStuff.Tests\\RandomStuff.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\rui.vilela\\Source\\CsStuff\\RandomStuff.Tests\\RandomStuff.Tests.csproj",
       "projectName": "RandomStuff.Tests",
-      "projectPath": "C:\\Users\\rui.vilela\\Source\\Repos\\CsStuff\\RandomStuff.Tests\\RandomStuff.Tests.csproj",
+      "projectPath": "C:\\Users\\rui.vilela\\Source\\CsStuff\\RandomStuff.Tests\\RandomStuff.Tests.csproj",
       "packagesPath": "C:\\Users\\rui.vilela\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rui.vilela\\Source\\Repos\\CsStuff\\RandomStuff.Tests\\obj\\",
+      "outputPath": "C:\\Users\\rui.vilela\\Source\\CsStuff\\RandomStuff.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5772,8 +5772,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\rui.vilela\\Source\\Repos\\CsStuff\\RandomStuff\\RandomStuff.csproj": {
-              "projectPath": "C:\\Users\\rui.vilela\\Source\\Repos\\CsStuff\\RandomStuff\\RandomStuff.csproj"
+            "C:\\Users\\rui.vilela\\Source\\CsStuff\\RandomStuff\\RandomStuff.csproj": {
+              "projectPath": "C:\\Users\\rui.vilela\\Source\\CsStuff\\RandomStuff\\RandomStuff.csproj"
             }
           }
         }
@@ -5807,10 +5807,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
