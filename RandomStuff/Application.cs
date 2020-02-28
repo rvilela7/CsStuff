@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace RandomStuff
 {
@@ -14,11 +15,14 @@ namespace RandomStuff
         public void run()
         {
             Random r = new Random();
-            var myLista = Enumerable.Range(0, r.Next(100))
-                                    .Select(i => r.Next(10))
+            var myLista = Enumerable.Range(0, 10)
+                                    .Select(i => r.Next(100))
                                     .ToList();
-            var myMD5List = myLista.Select(m => _md5Gen.GetMD5(m.ToString())).ToList();
-            myMD5List.ForEach(i => Console.WriteLine(i));
+            myLista.ForEach( m => Console.WriteLine(m));
+            Console.WriteLine();
+            List<KeyValuePair<int, string>> myMD5Res = new List<KeyValuePair<int, string>>();
+            myLista.ForEach(m => myMD5Res.Add( new KeyValuePair<int, string>(m, _md5Gen.GetMD5(m))));
+            myMD5Res.ForEach(i => Console.WriteLine($"{i.Key} -> {i.Value}"));
         }
     }
 }

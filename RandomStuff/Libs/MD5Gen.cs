@@ -25,5 +25,7 @@ namespace RandomStuff.MD5
                 return sb.ToString();
             }
         }
+
+        public string GetMD5(int input) => GetMD5(input.ToString());
     }
 }
