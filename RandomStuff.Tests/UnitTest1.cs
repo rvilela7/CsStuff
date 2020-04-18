@@ -1,17 +1,42 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using RandomStuff;
+using RandomStuff.MD5;
 
 namespace RandomStuff.Tests
 {
-    [TestClass]
-    public class UnitTest1
+    public class Tests
     {
-        [TestMethod]
-        public void TestMethod1()
+        [SetUp]
+        public void Setup()
         {
-            var str = MD5Gen.CreateMD5("ABCDEF");
-            var result = "8827a41122a5028b9808c7bf84b9fcf6".ToUpper();
-            Assert.IsTrue(str.Equals(result));
         }
+
+        [Test]
+        public void SimpleTest()
+        {
+            Assert.Pass();
+        }
+
+        [Test]
+        public void MD5StringTest()
+        {
+            MD5Gen md5Gen = new MD5Gen();
+            Assert.IsNotNull(md5Gen);
+            string result = md5Gen.GetMD5("ABC");
+            Assert.IsNotEmpty(result);
+            Assert.AreEqual("902FBDD2B1DF0C4F70B4A5D23525E932", result);
+        }
+
+        [Test]
+        public void MD5IntTest()
+        {
+            MD5Gen md5Gen = new MD5Gen();
+            Assert.IsNotNull(md5Gen);
+            string result = md5Gen.GetMD5(1234);
+            Assert.IsNotEmpty(result);
+            Assert.AreEqual("81DC9BDB52D04DC20036DBD8313ED055", result);
+            
+        }
+
     }
 }
