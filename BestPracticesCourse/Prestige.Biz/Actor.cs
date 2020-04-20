@@ -7,6 +7,7 @@ namespace Prestige.Biz
         public Actor()
         {
             Console.WriteLine("An actor is born.");
+            //this.currentAgency = new Agency(); //Implicit inicialization
         }
 
         public Actor(string actorName) : this()
@@ -37,6 +38,21 @@ namespace Prestige.Biz
         //Use prop
         public int ActorAge { get; set; }
         public string ActorDescription { get; set; } = "Regular actor";
+
+        private Agency currentAgency;
+
+        public Agency CurrentAgency
+        {
+            get {
+                if (currentAgency == null) //lazy load
+                {
+                    currentAgency = new Agency();
+                }
+                return currentAgency; 
+            }
+            set { currentAgency = value; }
+        }
+
 
 
         /// <summary>
@@ -69,5 +85,12 @@ namespace Prestige.Biz
             string details = "Booking can change if actor starts trouble.";
             return $"Actor {ActorName} is booked on {theDate}. {details}";
         }
+
+        public string GetAgency()
+        {
+            //var currentAgency = new Agency();
+            return CurrentAgency.Name;
+        }
+
     }
 }

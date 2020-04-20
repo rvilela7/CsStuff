@@ -62,5 +62,15 @@
 3. Use getter for simple protection, formatting, and initializing
 4. Use setter for simple protection, formatting, and validation
 
-5. *prop* when getter/setter can be ignored
+5. *prop* when getter/setter can be ignored aka **Auto Implemented Properties**
 6. No abbreviations
+
+## Object
+
+1. If a object is needed always initialize in construct
+2. If sometimes use lazy load with property getter
+3. Always check for null! Use null conditional operator
+
+## using
+
+1. For streams and DB connections
