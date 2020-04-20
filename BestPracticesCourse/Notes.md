@@ -36,3 +36,31 @@
 ## Singletons
 
 (see design C# for features)
+1. Only if you need one instantce
+
+## Method Overloading
+
+1. /// reads parameters method
+2. Comment
+3. Use few parameters (or use an object)
+4. Order
+
+## Method Chaining
+
+1. Avoid Duplication of code!
+2. No need to alter test cases
+3. Don't complicate
+
+## Const/Readonly
+
+1. Readonly can be setup in runtime
+
+## Properties
+
+1. See Lazy Loading (getter)
+2. Validate incoming value with (setter) **important**
+3. Use getter for simple protection, formatting, and initializing
+4. Use setter for simple protection, formatting, and validation
+
+5. *prop* when getter/setter can be ignored
+6. No abbreviations

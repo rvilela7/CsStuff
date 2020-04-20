@@ -19,10 +19,13 @@ namespace Prestige.Biz
         public string ActorName
         {
             get { return actorName; }
-            set { actorName = value; }
+            set {
+                var formattedName = value?.Trim();
+                actorName = formattedName; 
+            }
         }
 
-
+        ////Minimize this with prop
         private string jobTitle;
 
         public string JobTitle
@@ -30,6 +33,10 @@ namespace Prestige.Biz
             get { return jobTitle; }
             set { jobTitle = value; }
         }
+
+        //Use prop
+        public int ActorAge { get; set; }
+        public string ActorDescription { get; set; } = "Regular actor";
 
 
         /// <summary>
@@ -40,6 +47,27 @@ namespace Prestige.Biz
         {
             jobTitle = "Actor";
             return jobTitle;
+        }
+
+        /// <summary>
+        /// Books actor and not date specified
+        /// </summary>
+        /// <returns></returns>
+        public string BookActor()
+        {
+            string details = "Booking can change if actor starts trouble."; //Use method chaining for avoid duplication
+            return $"Actor {ActorName} is booked. {details}";
+        }
+
+        /// <summary>
+        /// Books actor on a specific date
+        /// </summary>
+        /// <param name="theDate"></param>
+        /// <returns></returns>
+        public string BookActor(string theDate)
+        {
+            string details = "Booking can change if actor starts trouble.";
+            return $"Actor {ActorName} is booked on {theDate}. {details}";
         }
     }
 }
