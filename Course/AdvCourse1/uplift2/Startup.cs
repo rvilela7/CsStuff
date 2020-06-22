@@ -30,8 +30,8 @@ namespace uplift2
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true) //Removed (s1-c15)
-            //services.AddDefaultIdentity<IdentityUser>()
+            //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true) //Removed (s1-c15)
+            services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
            services.AddRazorPages();
@@ -51,6 +51,9 @@ namespace uplift2
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            //Middlewares
+            #region Middlewares
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -58,6 +61,8 @@ namespace uplift2
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            #endregion
 
             app.UseEndpoints(endpoints =>
             {
