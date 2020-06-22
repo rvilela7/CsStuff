@@ -7,5 +7,5 @@ Notes Section1
 -- Tag Helpers. Instead of @Html.Label use a react/angular syntax <label class="form-control" asp-for="FirstName"></label> //asp-for refers model. Better than old html helpers.
 
 Notes Section2
-
+-- Runtime compilation of razor pages in Microsoft.AspNetCore.MVC.Razor.RuntimeCompilation
 
