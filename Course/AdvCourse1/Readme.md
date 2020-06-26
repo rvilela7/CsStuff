@@ -9,3 +9,5 @@ Notes Section1
 Notes Section2
 -- Runtime compilation of razor pages in Microsoft.AspNetCore.MVC.Razor.RuntimeCompilation
 
+
+-- This course is not so interesting as expected ... Speaker voice ... Topics (Areas) ... No unit tests ...
