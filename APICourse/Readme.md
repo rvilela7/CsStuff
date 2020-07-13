@@ -7,3 +7,5 @@ From https://www.youtube.com/watch?v=fmvcAzHpsk8
 
 
 ## code -r <folder>
+## intellisense over a not implemented Interface can scaffold all methods
+
