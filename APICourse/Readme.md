@@ -23,7 +23,8 @@ From https://www.youtube.com/watch?v=fmvcAzHpsk8
 
 dotnet ef
 
-1:18 Check 
+dotnet ef migrations add InitialMigration
+dotnet ef migrations remove
 
 ## Security
 
