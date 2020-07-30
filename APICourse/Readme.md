@@ -35,5 +35,9 @@ $ dotnet user-secrets -h
 
 check also Azure Key Vault
 
+### 1:23
+
+
+
 
 
