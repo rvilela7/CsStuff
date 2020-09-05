@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using GitHubOAuth.Data;
@@ -24,7 +25,6 @@ namespace GitHubOAuth
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
@@ -33,10 +33,23 @@ namespace GitHubOAuth
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
-           services.AddRazorPages();
+            services.AddRazorPages();
+
+            //Default provider, incomplete and more extensive
+            // services.AddAuthentication().AddOAuth("GitHub", options =>
+            // {
+            //     options.ClientSecret = Configuration["GitOAuthClientSecret"]; //In github config
+            //     options.ClientId = "b103a56c9df786c7a126";
+            // });
+
+            //Github nugget
+            services.AddAuthentication().AddGitHub(options =>
+            {
+                options.ClientId = "b103a56c9df786c7a126";
+                options.ClientSecret = Configuration["GitOAuthClientSecret"];
+            });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
