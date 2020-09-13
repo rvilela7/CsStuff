@@ -1,2 +1,0 @@
-## Github Auth trials
-
