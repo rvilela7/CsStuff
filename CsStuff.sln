@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomStuff", "RandomStuff\RandomStuff.csproj", "{F36D1C87-0746-4D0D-8A33-B3F115B73B43}"
 EndProject
@@ -18,8 +18,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api", "DepInj\api.csproj", "{690306E5-2F64-410F-ACC4-5412DD897C43}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Async", "Async\Async.csproj", "{023DFE7E-AAA3-4A02-BAC1-05DF11D23FA2}"
+<<<<<<< HEAD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubOAuth", "GitHubOAuth\GitHubOAuth.csproj", "{CE86F56E-9E6F-44B3-A004-3C3F76FE8473}"
+=======
+>>>>>>> master
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -131,10 +134,17 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5DB9EEE4-871C-4EA1-866B-8AE006AB4280} = {8089F76A-8B8D-470B-88B3-AA81D06FFA26}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+<<<<<<< HEAD
 		SolutionGuid = {E58741FE-E862-43A7-BAAD-F09BE3042884}
+=======
+		SolutionGuid = {26E1282D-C98A-4FC1-BAAD-878112CDA1E6}
+>>>>>>> master
 	EndGlobalSection
 EndGlobal
